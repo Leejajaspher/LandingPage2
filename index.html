@@ -5,16 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Educational Landing Page</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+</style>
 </head>
 <style>
   .clip-triangle {
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   }
+  *{
+  
+  font-family: "Righteous", sans-serif;
+  font-weight: 20px;
+  font-style: normal;
+}
 </style>
 
-<body class="font-sans antialiased bg-white text-gray-800">
+<body>
   <!-- Header/Navbar -->
-<header class="flex justify-between items-center px-6 py-4 bg-white shadow-md">
+<header class="flex justify-between items-center px-6 py-2 bg-white shadow-md">
   <!-- Logo -->
   <div class="flex items-center space-x-2">
     <img src="Assests/logo.png" alt="Logo" class="w-30 h-20" />
@@ -29,14 +38,27 @@
   </nav>
 
   <!-- Icons and Buttons -->
-    <div class="flex items-center space-x-4">
-    <img src="Assests/cart (1).png" alt="Cart" class="w-5 h-5 relative">
-    <img src="Assests/contact.png" alt="Contact" class="w-5 h-5">
-    <img src="Assests/search.png" alt="Search" class="w-5 h-5">
-    
+    <div class="flex items-center gap-7">
+  <!-- Cart Icon -->
+ <div class="relative p-1 rounded-full hover:shadow-lg hover:scale-110 transition duration-300 cursor-pointer w-10 h-10">
+  <!-- Base Icon (resized) -->
+  <img src="Assests/cart (1).png" alt="Cart" class="w-7 h-7" />
+
+  <!-- Overlay Icon -->
+  <img src="Assests/cart (2).png" alt="Cart Notification"
+       class="absolute top-0 right-0 w-5 h-5" />
+</div>
+ <!-- Contact Icon -->
+  <div class="p-1 rounded-full hover:shadow-lg hover:scale-110 transition duration-300 cursor-pointer">
+    <img src="Assests/contact.png" alt="Contact" class="w-6 h-6" />
+  </div>
+  <!-- Search Icon -->
+  <div class="p-1 rounded-full hover:shadow-lg hover:scale-110 transition duration-300 cursor-pointer">
+    <img src="Assests/search.png" alt="Search" class="w-6 h-6" />
+  </div>
     <button class="text-sm font-medium hover:opacity-50">Login</button>
     <button class="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:scale-110 transition duration-300">Signup</button>
-  </div>
+  
 </header>
 
 <!-- Hero Section -->
@@ -50,14 +72,14 @@
       nothing else.
     </h1>
      <div class="flex flex-wrap gap-4 mb-6">
-        <button class="px-5 py-3 bg-white text-indigo-700 rounded-md">View Courses</button>
-        <button class="px-5 py-3 border border-white rounded-md">Get Free Consultation</button>
+        <button class="px-5 py-3 border border-white rounded-md">View Courses</button>
+        <button class="px-5 py-3 border border-none rounded-md">Get Free Consultation</button>
       </div>
-      <div class="flex bg-white rounded-md overflow-hidden w-fit">
+      <div class="flex bg-white rounded-md overflow-hidden w-fit p-1">
   <input
     type="text"
     placeholder="What do you want to learn today?"
-    class="w-[250px] px-4 py-2 text-black focus:outline-none"
+    class="w-[270px] px-4 py-2 text-black focus:outline-none"
   />
   <button class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 hover:scale-105 transition duration-300">
     Search
@@ -75,7 +97,7 @@
 
     <!-- Text Content -->
     <div>
-      <h3 class="font-semibold ">Shyam</h3>
+      <h3>Shyam</h3>
       <p class="text-sm mt-1">
         In a coaching role, you ask the questions and rely more on your staff, who become the experts, to provide the information.
       </p>
@@ -116,7 +138,7 @@
       Featured <span class="text-blue-500">Courses</span>
     </h2>
     <p class="text-gray-600 max-w-xl mx-auto mb-12">
-      The feature courses are we invented our teaching part
+      THE FEATURE COURSES ARE WE INVENED OUR TEACHING PART
     </p>
 
     <!-- 🛠️ Combine all 6 cards into one grid -->
@@ -130,11 +152,11 @@
             <span>1,957 Students</span>
             <span>01h 59m</span>
           </div>
-          <h3 class="mt-5 font-semibold text-gray-900 mb-2">
+          <h3 class="mt-5 text-gray-900 mb-2">
             Motion Graphics:Create a Nice <br /> Typography Animation
           </h3>
           <div class="mt-10 flex justify-between items-center">
-            <span class="font-semibold">Rs.499</span>
+            <span class="text-gray-500">Rs.499</span>
             <button class="text-gray-700 w-10 h-10"><img src="Assests/carticon.png"></button>
           </div>
         </div>
@@ -148,11 +170,11 @@
             <span>9575 Students</span>
             <span>01h 59m</span>
           </div>
-          <h3 class="mt-5 font-semibold text-gray-900 mb-2">
+          <h3 class="mt-5 text-gray-900 mb-2">
             Advance PHP Knowledge with JS to  <br /> make smart web
           </h3>
           <div class="mt-10 flex justify-between items-center">
-            <span class="font-semibold">Rs.499</span>
+            <span class="text-gray-500">Rs.499</span>
             <button class="text-gray-700 w-10 h-10"><img src="Assests/carticon.png"></button>
           </div>
         </div>
@@ -166,11 +188,11 @@
             <span>2957 Students</span>
             <span>01h 59m</span>
           </div>
-          <h3 class="mt-5 font-semibold text-gray-900 mb-2">
+          <h3 class="mt-5 text-gray-900 mb-2">
             Education Software and PHP and JS <br /> System Script
           </h3>
           <div class="mt-10 flex justify-between items-center">
-            <span class="font-semibold">Rs.499</span>
+            <span class="text-gray-500">Rs.499</span>
             <button class="text-gray-700 w-10 h-10"><img src="Assests/carticon.png"></button>
           </div>
         </div>
@@ -184,11 +206,11 @@
             <span>5,457 Students</span>
             <span>01h 59m</span>
           </div>
-          <h3 class="mt-5 font-semibold text-gray-900 mb-2">
+          <h3 class="mt-5 text-gray-900 mb-2">
            The Complete Financial Analyst <br /> Training & Investing
           </h3>
           <div class="mt-10 flex justify-between items-center">
-            <span class="font-semibold">Rs.499</span>
+            <span class="text-gray-500">Rs.499</span>
             <button class="text-gray-700 w-10 h-10"><img src="Assests/carticon.png"></button>
           </div>
         </div>
@@ -202,11 +224,11 @@
             <span>595 Students</span>
             <span>01h 59m</span>
           </div>
-          <h3 class="mt-5 font-semibold text-gray-900 mb-2">
+          <h3 class="mt-5 text-gray-900 mb-2">
             Marketing 2023: Complete Guide To <br /> Instagram Growth
           </h3>
           <div class="mt-10 flex justify-between items-center">
-            <span class="font-semibold">Rs.499</span>
+            <span class="text-gray-500">Rs.499</span>
             <button class="text-gray-700 w-10 h-10"><img src="Assests/carticon.png"></button>
           </div>
         </div>
@@ -220,11 +242,11 @@
             <span>458 Students</span>
             <span>03h 00m</span>
           </div>
-          <h3 class="mt-5 font-semibold text-gray-900 mb-2">
+          <h3 class="mt-5 text-gray-900 mb-2">
             Learn 3D Modeling and Design <br /> for Beginners
           </h3>
           <div class="mt-10 flex justify-between items-center">
-            <span class="font-semibold">Rs.499</span>
+            <span class="text-gray-500">Rs.499</span>
             <button class="text-gray-700 w-10 h-10"><img src="Assests/carticon.png"></button>
           </div>
         </div>
@@ -241,8 +263,8 @@
 <section class="bg-gradient-to-r from-[#739FE8] to-[#4F18CA] py-16 text-white text-center">
   <div class="max-w-6xl mx-auto px-4">
     <!-- Heading -->
-    <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">
-      Why <span class="text-blue-300">learn</span> with our courses?
+    <h2 class="text-3xl sm:text-4xl  mb-4">
+      Why <span class="text-[#0E38CD]">learn</span> with our courses?
     </h2>
     <p class="text-gray-200 text-sm sm:text-base mb-12">
       We are providing the best courses and top classes.And <br class="hidden sm:block" />
@@ -255,21 +277,21 @@
       <!-- Learn -->
       <div class="space-y-3 md:border-r md:border-white md:border-dashed md:pr-6">
         <img src="Assests/Icon.png" alt="Learn Icon" class="mx-auto h-12">
-        <h3 class="font-semibold text-lg">01. Learn</h3>
+        <h3 class="text-lg">01. Learn</h3>
         <p class="text-sm text-gray-300">Learn continuously. There is always <br /> "one more thing" to learn.</p>
       </div>
 
       <!-- Graduate -->
       <div class="space-y-3 md:border-r md:border-white md:border-dashed md:px-6">
         <img src="Assests/Icon (1).png" alt="Graduate Icon" class="mx-auto h-12">
-        <h3 class="font-semibold text-lg">02. Graduate</h3>
+        <h3 class="text-lg">02. Graduate</h3>
         <p class="text-sm text-gray-300">Be bold. Be courageous.<br /> Be your best.</p>
       </div>
 
       <!-- Work -->
       <div class="space-y-3 md:pl-6">
         <img src="Assests/Icon (2).png" alt="Work Icon" class="mx-auto h-12">
-        <h3 class="font-semibold text-lg">03. Work</h3>
+        <h3 class="text-lg">03. Work</h3>
         <p class="text-sm text-gray-300">Great companies are built in <br /> the office, with hard work put <br /> in by team.</p>
       </div>
     </div>
@@ -279,8 +301,8 @@
   <section class="bg-[#eaf5ff] py-16">
   <div class="max-w-7xl mx-auto px-4 text-center">
     <!-- Title -->
-    <h2 class="text-3xl font-bold text-gray-800 mb-2">Top <span class="text-blue-600">Categories</span></h2>
-    <p class="text-gray-500 text-sm">100+ unique online course list designs</p>
+    <h2 class="text-3xl  text-gray-800 mb-2">Top <span class="text-blue-600">Categories</span></h2>
+    <p class="text-gray-700 text-sm">100+ unique online course list designs</p>
 
     <!-- Cards -->
     <div class="mt-12 h-56 flex flex-wrap justify-center gap-6">
@@ -289,7 +311,7 @@
         <div class="p-3 rounded-full inline-block mb-3">
           <img src="Assests/box1.png" class="w-full h-12 object-cover " />
         </div>
-        <h3 class=" font-semibold text-sm text-gray-800">Digital <br /> Marketing</h3>
+        <h3 class=" text-sm text-gray-800">Digital <br /> Marketing</h3>
         <p class="mt-10 text-xs text-gray-500">25 Courses</p>
       </div>
       
@@ -298,7 +320,7 @@
         <div class="p-3 rounded-full inline-block mb-3">
           <img src="Assests/box2.png" class="w-full h-12 object-cover" />
         </div>
-        <h3 class="font-semibold text-sm text-gray-800">Web <br /> Development </h3>
+        <h3 class="text-sm text-gray-800">Web <br /> Development </h3>
         <p class="mt-10 text-xs text-gray-500">16 Courses</p>
       </div>
       
@@ -307,7 +329,7 @@
         <div class="p-3 rounded-full inline-block mb-3">
           <img src="Assests/box3.png" class="w-full h-12 object-cover" />
         </div>
-        <h3 class="font-semibold text-sm text-gray-800">Art & <br /> Humanties</h3>
+        <h3 class="text-sm text-gray-800">Art & <br /> Humanties</h3>
         <p class="mt-10 text-xs text-gray-500">76 Courses</p>
       </div>
 
@@ -316,7 +338,7 @@
         <div class="p-3 rounded-full inline-block mb-3">
           <img src="Assests/box4.png" class="w-full h-12 object-cover" />
         </div>
-        <h3 class="font-semibold text-sm text-gray-800">Personal <br /> Development</h3>
+        <h3 class="text-sm text-gray-800">Personal <br /> Development</h3>
         <p class="mt-10 text-xs text-gray-500">22 Courses</p>
       </div>
       
@@ -325,7 +347,7 @@
         <div class="p-3 rounded-full inline-block mb-3">
           <img src="Assests/box5.png" class="w-full h-12 object-cover" />
         </div>
-        <h3 class="font-semibold text-sm text-gray-800">IT and <br /> Software</h3>
+        <h3 class="text-sm text-gray-800">IT and <br /> Software</h3>
         <p class="mt-10 text-xs text-gray-500">110 Courses</p>
       </div>
       
@@ -334,7 +356,7 @@
         <div class="p-3 rounded-full inline-block mb-3">
           <img src="Assests/box6.png" class="w-full h-12 object-cover" />
         </div>
-        <h3 class="font-semibold text-sm text-gray-800">Graphic <br /> Design</h3>
+        <h3 class="text-sm text-gray-800">Graphic <br /> Design</h3>
         <p class="mt-10 text-xs text-gray-500">85 Courses</p>
       </div>
     </div>
@@ -358,8 +380,8 @@
   <div class="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 w-10 h-10 bg-[#0094E7] rotate-180 clip-triangle blur-sm opacity-80"></div>
 
   <!-- Existing Content -->
-  <h2 class="text-2xl font-bold mt-5 mb-4">Subscribe For Get Update <br /> Every New Courses</h2>
-  <p class="text-sm mb-6">20k+ students daily learn with Eduvi. Subscribe for new courses.</p>
+  <h2 class="text-2xl mt-5 mb-4">Subscribe For Get Update <br /> Every New Courses</h2>
+  <p class=" text-sm mb-6 bg-transparent">20k+ students daily learn with Eduvi. Subscribe for new courses.</p>
 
   <form class="flex flex-col md:flex-row justify-center items-center gap-0 w-full max-w-sm mx-auto">
     <input type="email" placeholder="enter your email" class="px-4 py-2 w-full md:w-auto flex-1 bg-white/20 text-white placeholder-white border border-none rounded-l-md outline-none" />
@@ -391,8 +413,8 @@
 <section class="bg-[#EAF4FF] py-20 ">
   <div class="max-w-6xl mx-auto px-4 text-center p-20 ">
     <!-- Section Heading -->
-    <h2 class="mt-0 text-3xl font-bold text-[#1F2B6C] mb-2">Testimonials</h2>
-    <p class="mb-36">What our student say about us</p>
+    <h2 class="mt-0 text-3xl text-[#1F2B6C] mb-2">Testimonials</h2>
+    <p class="mb-36 text-gray-700">What our student say about us</p>
 
     <!-- Testimonial Cards Container -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-0">
@@ -456,15 +478,15 @@
     
     <!-- Left Column -->
     <div>
-      <h2 class="text-xl text-black font-semibold mb-4">Connect</h2>
+      <h2 class="text-2xl text-black  mb-4">Connect</h2>
       <div class="mb-2 mr-12"><img src="Assests/logo.png" ></div>
-      <p class="text-black">Sri Jaganath Nivas-8-1-1/34/35&/1,<br>
+      <p class="text-gray-700">Sri Jaganath Nivas-8-1-1/34/35&/1,<br>
       Pragati Colony, ThotiNadareddy, Navaob Saheb Kunta, Hyd, 500005</p>
     </div>
 
     <!-- Classes -->
     <div>
-      <h3 class="text-black font-semibold mb-4">Classes</h3>
+      <h3 class="text-2xl text-black mb-4">Classes</h3>
       <ul class="space-y-2 text-black/90">
         <li>Classroom courses</li>
         <li>Virtual classroom courses</li>
@@ -476,7 +498,7 @@
 
     <!-- Community -->
     <div>
-      <h3 class="text-black font-semibold mb-4">Community</h3>
+      <h3 class="text-black text-2xl mb-4">Community</h3>
       <ul class="space-y-2 text-black/90">
         <li>Learners</li>
         <li>Partners</li>
@@ -488,7 +510,7 @@
 
     <!-- Quick Links -->
     <div>
-      <h3 class="text-black font-semibold mb-4">Quick links</h3>
+      <h3 class="text-black text-2xl mb-4">Quick links</h3>
       <ul class="space-y-2 text-black/90">
         <li>Home</li>
         <li>Professional Education</li>
@@ -501,7 +523,7 @@
 
     <!-- More -->
     <div>
-      <h3 class="text-black font-semibold mb-4">More</h3>
+      <h3 class="text-black text-2xl mb-4">More</h3>
       <ul class="space-y-2 text-black/90">
         <li>Press</li>
         <li>Investors</li>
