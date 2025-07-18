@@ -20,46 +20,72 @@
   font-style: normal;
 }
 </style>
-
 <body>
-  <!-- Header/Navbar -->
-<header class="flex justify-between items-center px-6 py-2 bg-white shadow-md">
-  <!-- Logo -->
-  <div class="flex items-center space-x-2">
-    <img src="Assests/logo.png" alt="Logo" class="w-30 h-20" />
+  <!-- Responsive Navbar -->
+<header class="bg-white shadow-md px-6 py-4">
+  <div class="flex items-center justify-between">
+    <!-- Logo -->
+    <div class="flex items-center space-x-2">
+      <img src="Assests/logo.png" alt="Logo" class="h-14 w-auto" />
     </div>
 
-  <!-- Nav Links -->
-  <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-gray-700">
-    <a href="#" class="hover:text-blue-500">Home</a>
-    <a href="#" class="hover:text-blue-500">About</a>
-    <a href="#" class="hover:text-blue-500">Courses</a>
-    <a href="#" class="hover:text-blue-500">Contact</a>
-  </nav>
+    <!-- Hamburger Menu Button (Mobile Only) -->
+    <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
 
-  <!-- Icons and Buttons -->
-    <div class="flex items-center gap-7">
-  <!-- Cart Icon -->
- <div class="relative p-1 rounded-full hover:shadow-lg hover:scale-110 transition duration-300 cursor-pointer w-10 h-10">
-  <!-- Base Icon (resized) -->
-  <img src="Assests/cart (1).png" alt="Cart" class="w-7 h-7" />
+    <!-- Desktop Menu -->
+    <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-gray-700">
+      <a href="#" class="hover:text-blue-500">Home</a>
+      <a href="#" class="hover:text-blue-500">About</a>
+      <a href="#" class="hover:text-blue-500">Courses</a>
+      <a href="#" class="hover:text-blue-500">Contact</a>
+    </nav>
 
-  <!-- Overlay Icon -->
-  <img src="Assests/cart (2).png" alt="Cart Notification"
-       class="absolute top-0 right-0 w-5 h-5" />
-</div>
- <!-- Contact Icon -->
-  <div class="p-1 rounded-full hover:shadow-lg hover:scale-110 transition duration-300 cursor-pointer">
-    <img src="Assests/contact.png" alt="Contact" class="w-6 h-6" />
+    <!-- Icons & Buttons (Desktop Only) -->
+    <div class="hidden md:flex items-center gap-4">
+      <!-- Cart Icon -->
+      <div class="relative p-1 hover:scale-110 transition">
+        <img src="Assests/cart (1).png" alt="Cart" class="w-7 h-7" />
+        <img src="Assests/cart (2).png" alt="Notify" class="absolute top-0 right-0 w-5 h-5" />
+      </div>
+
+      <!-- Contact Icon -->
+      <div class="p-1 hover:scale-110 transition">
+        <img src="Assests/contact.png" alt="Contact" class="w-6 h-6" />
+      </div>
+
+      <!-- Search Icon -->
+      <div class="p-1 hover:scale-110 transition">
+        <img src="Assests/search.png" alt="Search" class="w-6 h-6" />
+      </div>
+
+      <button class="text-sm font-medium hover:opacity-50">Login</button>
+      <button class="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:scale-110 transition">
+        Signup
+      </button>
+    </div>
   </div>
-  <!-- Search Icon -->
-  <div class="p-1 rounded-full hover:shadow-lg hover:scale-110 transition duration-300 cursor-pointer">
-    <img src="Assests/search.png" alt="Search" class="w-6 h-6" />
+
+  <!-- Mobile Menu (Hidden by default) -->
+  <div id="mobile-menu" class="hidden md:hidden flex-col mt-4 space-y-3 text-sm text-gray-700 font-medium ">
+    <a href="#" class="hover:text-blue-500 mr-10">Home</a>
+    <a href="#" class="hover:text-blue-500 mr-10">About</a>
+    <a href="#" class="hover:text-blue-500 mr-10">Courses</a>
+    <a href="#" class="hover:text-blue-500 mr-10">Contact</a>
+    <div class="flex gap-4 mt-2">
+      <button class="text-sm font-medium hover:opacity-50">Login</button>
+      <button class="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:scale-110 transition">
+        Signup
+      </button>
+    </div>
   </div>
-    <button class="text-sm font-medium hover:opacity-50">Login</button>
-    <button class="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:scale-110 transition duration-300">Signup</button>
-  
 </header>
+
 
 <!-- Hero Section -->
 <section class="flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-12 py-12 bg-gradient-to-r from-indigo-900 via-purple-800 to-blue-800 text-white gap-10">
@@ -549,6 +575,14 @@
     Copyright © 2023 askmeidentity, All Rights Reserved
   </p>
 </footer>
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
 
 </body>
 </html>
