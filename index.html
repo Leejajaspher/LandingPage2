@@ -6,6 +6,12 @@
   <title>Educational Landing Page</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<style>
+  .clip-triangle {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+</style>
+
 <body class="font-sans antialiased bg-white text-gray-800">
   <!-- Header/Navbar -->
 <header class="flex justify-between items-center px-6 py-4 bg-white shadow-md">
@@ -77,9 +83,7 @@
     </div>
   </div>
 </div>
-
-      <!-- Add more logos if needed -->
-    </div>
+</div>
   </div>
 
   <!-- Right Image Section -->
@@ -337,8 +341,49 @@
   </div>
 </section>
 
- 
+<section class="mt-36 relative bg-gradient-to-r from-[#5F89FF] to-[#D946EF] rounded-xl text-white px-6 py-12 my-12 max-w-4xl mx-auto text-center">
+  <!-- Top Triangle -->
+  <div class="absolute top-8 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-[#0094E7] rotate-100 clip-triangle blur-sm opacity-80"></div>
+     
+    <!-- Floating images -->
+    <img src="Assests/profile1.png" class="absolute w-10 h-10 rounded-full top-4 left-10" alt="user1" />
+    <img src="Assests/profile2.png" class="absolute w-10 h-10 rounded-full top-1/2 -translate-y-1/2 left-36" alt="user2" />
+    <img src="Assests/profile3.png" class="absolute w-10 h-10 rounded-full bottom-4 left-10" alt="user3" />
+    
+    <img src="Assests/profile4.png" class="absolute w-10 h-10 rounded-full top-4 right-10" alt="user4" />
+    <img src="Assests/profile5.png" class="absolute w-10 h-10 rounded-full top-1/2 -translate-y-1/2 right-36" alt="user5" />
+    <img src="Assests/profile6.png" class="absolute w-10 h-10 rounded-full bottom-4 right-10" alt="user6" />
 
+  <!-- Bottom Right Triangle -->
+  <div class="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 w-10 h-10 bg-[#0094E7] rotate-180 clip-triangle blur-sm opacity-80"></div>
+
+  <!-- Existing Content -->
+  <h2 class="text-2xl font-bold mb-2">Subscribe For Get Update <br /> Every New Courses</h2>
+  <p class="text-sm mb-6">20k+ students daily learn with Eduvi. Subscribe for new courses.</p>
+
+  <form class="flex flex-col md:flex-row justify-center items-center gap-0 w-full max-w-sm mx-auto">
+    <input type="email" placeholder="enter your email" class="px-4 py-2 w-full md:w-auto flex-1 bg-white/20 text-white placeholder-white border border-none rounded-l-md outline-none" />
+    <button class="bg-blue-900 hover:bg-blue-800 text-white px-6 py-2 rounded-md transition duration-300">Subscribe</button>
+  </form>
+</section>
+<!-- Video Reference -->
+<section class="relative bg-white py-16">
+  <div class="max-w-5xl mx-auto px-4 flex justify-center items-center">
+    <div class="relative">
+      <!-- Video Image -->
+      <img src="your-image.jpg" alt="Video Thumbnail" class="rounded-3xl w-full max-w-xl shadow-md" />
+
+      <!-- Play Button -->
+      <div class="absolute inset-0 flex justify-center items-center">
+        <div class="w-16 h-16 bg-white bg-opacity-60 rounded-full flex justify-center items-center shadow-lg">
+          <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M6 4l10 6-10 6V4z" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 </body>
 </html>
